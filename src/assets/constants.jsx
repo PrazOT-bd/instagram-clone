@@ -236,3 +236,93 @@ export const CommentLogo = () => (
         ></path>
     </svg>
 );
+
+export const MessageLogo = () => (
+    <svg
+        aria-label='Message'
+        color='rgb(245, 245, 245)'
+        fill='rgb(245, 245, 245)'
+        height='24'
+        role='img'
+        viewBox='0 0 24 24'
+        width='24'
+    >
+        <title>Message</title>
+        <path
+            d='M12.003 2.001a9.705 9.705 0 1 1 0 19.4 10.876 10.876 0 0 1-2.895-.384.798.798 0 0 0-.533.04l-1.984.876a.801.801 0 0 1-1.123-.708l-.054-1.78a.806.806 0 0 0-.27-.569 9.49 9.49 0 0 1-3.14-7.175 9.65 9.65 0 0 1 10-9.7Z'
+            fill='none'
+            stroke='currentColor'
+            strokeMiterlimit='10'
+            strokeWidth='1.739'
+        ></path>
+        <path
+            d='M17.79 10.132a.659.659 0 0 0-.962-.873l-2.556 2.05a.63.63 0 0 1-.758.002L11.06 9.47a1.576 1.576 0 0 0-2.277.42l-2.567 3.98a.659.659 0 0 0 .961.875l2.556-2.049a.63.63 0 0 1 .759-.002l2.452 1.84a1.576 1.576 0 0 0 2.278-.42Z'
+            fillRule='evenodd'
+        ></path>
+    </svg>
+);
+
+export const SettingsLogo = () => (
+    <svg
+        aria-label='Settings'
+        color='rgb(245, 245, 245)'
+        fill='rgb(245, 245, 245)'
+        height='24'
+        role='img'
+        viewBox='0 0 24 24'
+        width='24'
+    >
+        <circle
+            cx='12'
+            cy='12'
+            fill='none'
+            r='8.635'
+            stroke='currentColor'
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth='2'
+        ></circle>
+        <path
+            d='M14.232 3.656a1.269 1.269 0 0 1 1.768 0l.464.464a1.269 1.269 0 0 1 0 1.768l-.464.464a1.269 1.269 0 0 1-1.768 0l-.464-.464a1.269 1.269 0 0 1 0-1.768Z'
+            fill='none'
+            stroke='currentColor'
+            strokeLinejoin='round'
+            strokeWidth='2'
+        ></path>
+    </svg>
+);
+
+export const ExploreLogo = () => (
+    <svg
+        aria-label='Find people'
+        color='rgb(245, 245, 245)'
+        fill='rgb(245, 245, 245)'
+        height='24'
+        role='img'
+        viewBox='0 0 24 24'
+        width='24'
+    >
+        <polygon
+            fill='none'
+            points='13.941 13.953 7.581 16.424 10.06 10.056 16.42 7.585 13.941 13.953'
+            stroke='currentColor'
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth='2'
+        ></polygon>
+        <polygon
+            fillRule='evenodd'
+            points='10.06 10.056 13.949 13.945 7.581 16.424 10.06 10.056'
+        ></polygon>
+        <circle
+            cx='12.001'
+            cy='12.005'
+            fill='none'
+            r='10.5'
+            stroke='currentColor'
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth='2'
+        ></circle>
+    </svg>
+);

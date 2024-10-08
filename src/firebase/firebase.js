@@ -5,13 +5,13 @@ import { getFirestore } from 'firebase/firestore'
 import { getStorage } from 'firebase/storage'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDnO42lilQqNZvW0ByDf-7AlLjvDMDzjqw",
-    authDomain: "insta-clone-bc83b.firebaseapp.com",
-    projectId: "insta-clone-bc83b",
-    storageBucket: "insta-clone-bc83b.appspot.com",
-    messagingSenderId: "708824406992",
-    appId: "1:708824406992:web:b70a395265dc272aa8f7d5",
-    measurementId: "G-L4B2KBRPPW"
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 

@@ -1,10 +1,14 @@
 import { Avatar, Box, Button, Flex, VStack } from "@chakra-ui/react";
 import useFollowUser from "../../hooks/useFollowUser";
 import useAuthStore from "../../store/authStore";
-
-
+import { Link } from "react-router-dom";
 
 const SuggestedUser = ({ user, setUser }) => {
+    // If user is not defined, return null or a fallback component
+    if (!user) {
+        return null; // or return <div>User data is not available</div>;
+    }
+
     const { isFollowing, isUpdating, handleFollowUser } = useFollowUser(user.uid);
     const authUser = useAuthStore((state) => state.user);
 
@@ -18,29 +22,33 @@ const SuggestedUser = ({ user, setUser }) => {
         });
     };
 
-    return <>
-        <Flex alignItems={"center"} justifyContent={"space-between"} mt={4} w={"full"}>
+    return (
+        <Flex justifyContent={"space-between"} alignItems={"center"} w={"full"}>
             <Flex alignItems={"center"} gap={2}>
-                <Avatar src={user.profilePicURL} size={"md"} />
-                <VStack spacing={2}>
-                    <Box fontSize={12} fontWeight={"bold"}>
-                        {user.fullName}
-                    </Box>
-                    <Box fontSize={12} color={"gray.500"}>
+                <Link to={`/${user.username}`}>
+                    <Avatar src={user.profilePicURL} size={"md"} />
+                </Link>
+                <VStack spacing={2} alignItems={"flex-start"}>
+                    <Link to={`/${user.username}`}>
+                        <Box fontSize={12} fontWeight={"bold"}>
+                            {user.fullName}
+                        </Box>
+                    </Link>
+                    <Box fontSize={11} color={"gray.500"}>
                         {user.followers.length} followers
                     </Box>
                 </VStack>
             </Flex>
-
-            {authUser.uid !== user.uid && (
+            {authUser?.uid !== user.uid && (
                 <Button
                     fontSize={13}
-                    fontWeight={"medium"}
-                    color={"blue.500"}
                     bg={"transparent"}
-                    _hover={{ color: "white" }}
-                    p={0} h={"max-content"}
+                    p={0}
+                    h={"max-content"}
+                    fontWeight={"medium"}
+                    color={"blue.400"}
                     cursor={"pointer"}
+                    _hover={{ color: "white" }}
                     onClick={onFollowUser}
                     isLoading={isUpdating}
                 >
@@ -48,10 +56,7 @@ const SuggestedUser = ({ user, setUser }) => {
                 </Button>
             )}
         </Flex>
-
-
-
-    </>
+    );
 };
 
 export default SuggestedUser;

@@ -41,7 +41,7 @@ const Sidebar = () => {
           <SidebarItems />
         </Flex>
 
-        {/* LOGOUT */}
+        {/* Logout */}
         <Tooltip
           hasArrow
           label={"Logout"}

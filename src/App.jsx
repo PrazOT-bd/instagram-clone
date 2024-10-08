@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import Homepage from "./pages/Homepage/Homepage";
+import HomePage from "./pages/HomePage/HomePage";
 import AuthPage from "./pages/AuthPage/AuthPage";
 import PageLayout from "./Layouts/PageLayout/PageLayout";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
@@ -12,9 +12,9 @@ function App() {
   return (
     <PageLayout>
       <Routes>
-        <Route path="/" element={authUser ? <Homepage /> : <Navigate to="/auth" />} />
-        <Route path="/auth" element={!authUser ? <AuthPage /> : <Navigate to="/" />} />
-        <Route path="/:username" element={<ProfilePage />} />
+        <Route path='/' element={authUser ? <HomePage /> : <Navigate to='/auth' />} />
+        <Route path='/auth' element={!authUser ? <AuthPage /> : <Navigate to='/' />} />
+        <Route path='/:username' element={<ProfilePage />} />
       </Routes>
     </PageLayout>
   );
